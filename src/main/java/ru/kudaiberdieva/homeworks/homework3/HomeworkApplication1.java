@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class HomeworkApplication1 {
 
     public static void main(String[] args) {
-        chooseTask();
+        //chooseTask();
         System.out.println("Задача 1:");
         greetings();
         System.out.println();
         System.out.println("Задача 2:");
-        checkSign();
+        checkSign(2, 3, 4);
         System.out.println();
         System.out.println("Задача 3:");
         selectColor();
@@ -19,7 +19,7 @@ public class HomeworkApplication1 {
         compareNumbers();
         System.out.println();
         System.out.println("Задача 5:");
-        addOrSubtractAndPrint();
+        addOrSubtractAndPrint(12, 32, false);
     }
 
 
@@ -31,10 +31,13 @@ public class HomeworkApplication1 {
 
     //Задача 2 метод checkSign()
 
-    public static void checkSign() {
-        int a = getRandom();
-        int b = getRandom();
-        int c = getRandom();
+    public static void checkSign(int a, int b, int c) {
+
+
+//       для задания *
+//       a = getRandom();
+//       b = getRandom();
+//       c = getRandom();
 
         int sum = a + b + c;
         if (sum >= 0) {
@@ -44,16 +47,20 @@ public class HomeworkApplication1 {
         }
     }
 
-    static int getRandom(){
+    static int getRandom() {
         int min = -200000;
         int max = 200000;
-        return  (int) (Math.random()*(max-min)+1)+min;
+        return (int) (Math.random() * (max - min) + 1) + min;
     }
 
     //Задача 3 метод selectColor()
 
     public static void selectColor() {
-        int data = getRandom();
+        int data = 12;
+
+        // для задания *
+        //int data = getRandom();
+
         if (data <= 10) {
             System.out.println("красный");
         }
@@ -68,54 +75,61 @@ public class HomeworkApplication1 {
     //Задача 4 метод compareNumbers()
 
     public static void compareNumbers() {
-        int a = getRandom();
-        int b = getRandom();
+        int a = 23;
+        int b = -14;
+
+        // для задания *
+//      int a = getRandom();
+//      int b = getRandom();
         if (a >= b) {
             System.out.println("a >= b");
-        }else {
+        } else {
             System.out.println("a < b");
         }
     }
 
     //Задача 5 метод addOrSubtractAndPrint()
 
-    public static void addOrSubtractAndPrint() {
-        Scanner console = new Scanner(System.in);
-        int initValue = getRandom();
-        int delta = getRandom();
-        boolean increment = console.nextBoolean();
+    public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
+
+        // для задания *
+        //Scanner console = new Scanner(System.in);
+        //initValue = getRandom();
+        //delta = getRandom();
+        // increment = console.nextBoolean();
         if (increment) {
             System.out.println(initValue + delta);
         } else {
             System.out.println(initValue - delta);
         }
     }
-    //* метод chooseTask
+    // для задания * метод chooseTask
 
-    public static void chooseTask() {
-        System.out.println("выберите число от 1 до 5");
-        Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
-        if(option<=5) {
-            switch (option) {
-                case 1:
-                    greetings();
-                    break;
-                case 2:
-                    checkSign();
-                    break;
-                case 3:
-                    selectColor();
-                    break;
-                case 4:
-                    compareNumbers();
-                    break;
-                case 5:
-                    addOrSubtractAndPrint();
-                    break;
-            }
-        }else {
-            System.out.println("ваше число не соответсвует условию");
-        }
-    }
+//      public static void chooseTask() {
+//        System.out.println("выберите число от 1 до 5");
+//        Scanner scanner = new Scanner(System.in);
+//        int option = scanner.nextInt();
+//        if(option<=5) {
+//            switch (option) {
+//                case 1:
+//                    greetings();
+//                    break;
+//                case 2:
+//                    checkSign();
+//                    break;
+//                case 3:
+//                    selectColor();
+//                    break;
+//                case 4:
+//                    compareNumbers();
+//                    break;
+//                case 5:
+//                    addOrSubtractAndPrint();
+//                    break;
+//            }
+//        }else {
+//            System.out.println("ваше число не соответсвует условию");
+//        }
+//    }
 }
+
