@@ -19,7 +19,7 @@ public class HomeworkApplication2 {
 
         //Задача 4
         int[] array = new int[5];
-        increaseElement(4, numArray);
+        increaseElement(5, numArray);
 
         //Задача 5
         int[] elements = {2,8,7,9,6,4,2,14};
@@ -80,8 +80,8 @@ public class HomeworkApplication2 {
     public static void increaseElement(int increment, int[]numArray){
 
         for (int i = 0; i < numArray.length; i++) {
-             int start = numArray[i] + increment;
-             numArray[i] = start;
+             //int start = numArray[i] + increment;
+             numArray[i] += increment;
 
         }
         System.out.println(Arrays.toString(numArray));
