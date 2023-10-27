@@ -31,7 +31,7 @@ public class HomeworkApplication2 {
         int[] arr = {1,2,3};
         System.out.println(checkEquality(arr));
         // Задача 3*
-        int[] figures = {2,20,9};
+        int[] figures = {10,20,92};
         boolean isOrdered = checkArrayOrder(figures, true);
         if(isOrdered){
             System.out.println("yes array is ordered");
@@ -60,7 +60,7 @@ public class HomeworkApplication2 {
         for(int i=0; i < numbers.length; i++) {
             if(numbers[i]>5){
                 sum+=numbers[i];
-            } continue;
+            }
         }
         System.out.println(sum);
         }
@@ -153,16 +153,11 @@ public class HomeworkApplication2 {
             for (int i = 1; i < array.length; i++) {
 
                 if(isOrderedByAsc) {
-                  if( array[i] <= array[i-1]){
+                  if( array[i] <= array[i-1]==isOrderedByAsc){
                       return false;
                   }
-                } else {
-                    if( array[i] >= array[i-1]){
-                        return false;
-                    }
                 }
             }
-
             return true;
         }
         // Задача 4 *
