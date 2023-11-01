@@ -14,6 +14,13 @@ public class HomeworkApplication7 {
         // Задача 3
         int[][] numbers = {{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {2, 2, 2, 2}};
         zeroDiagonal(numbers);
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                System.out.print(numbers[i][j]);
+            }
+            System.out.println();
+        }
+        
         System.out.println();
         // Задача 4
         int[][] matrix = {{-9, -3, -1, 2}, {0, 4, -7, 4}, {17, 5, 5, 10}};
@@ -53,16 +60,20 @@ public class HomeworkApplication7 {
         // Задача 3
 
     public static void zeroDiagonal(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (i == j || i + j == array.length - 1) {
-                    array[i][j] = 0;
-                }
-
-                System.out.print(array[i][j]);
-            }
-            System.out.println();
+        for(int i=0; i< array.length; i++){
+            array[i][i] = 0;
+            array[array.length-1-i][i]=0; // в этом случае вывод будет тогда в main
         }
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                if (i == j || i + j == array.length - 1) {
+//                    array[i][j] = 0;
+//                }
+//
+//                System.out.print(array[i][j]);
+//            }
+//            System.out.println();
+//        }
     }
         // Задача 4
 
