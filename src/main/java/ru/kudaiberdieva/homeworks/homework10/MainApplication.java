@@ -34,7 +34,7 @@ public class MainApplication {
         box.info();
         box.putItem("doll");
         box.info();
-        box.throwItem("doll");
+        box.throwItem();
         box.info();
 
     }

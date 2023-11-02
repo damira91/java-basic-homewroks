@@ -1,7 +1,7 @@
 package ru.kudaiberdieva.homeworks.homework10;
 
 public class Box {
-    private String size;
+    private final String size;
     private String color;
     public boolean isOpened;
     private String item;
@@ -49,12 +49,14 @@ public class Box {
             System.out.println("There is already an item in the box");
         }
     }
-    public void throwItem(String item){
+    public void throwItem(){
         if(this.item==null){
             System.out.println("Box is empty");
-        }else{
+        }
+        else{
+            System.out.println(item + " is thrown from the box");
             this.item = null;
-            System.out.println(item+ " is thrown from the box");
+
         }
     }
 
