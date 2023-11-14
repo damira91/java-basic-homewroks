@@ -4,14 +4,14 @@ public class MainApplication {
 
 
     public static void main(String[] args) {
-        Cat cat = new Cat("Felix", 13, 400, false);
+        Cat cat = new Cat("Felix", 13, 40, 0, 0, false);
         cat.info();
         if(!cat.isTired){
             System.out.println("Running time:  " + cat.run(280) + " seconds");
         }else{
         System.out.println("Cat is tired");
         }
-
+        cat.swim(200);
         cat.info();
         if(!cat.isTired){
             System.out.println("Running time: " + cat.run(130) + " seconds");
