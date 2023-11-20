@@ -1,7 +1,7 @@
 package ru.kudaiberdieva.homeworks.homework12;
 
 public class Cat {
-    private String name;
+    private final String name;
     private int appetite;
     private boolean isFull;
 
@@ -10,12 +10,9 @@ public class Cat {
         this.appetite = appetite;
         this.isFull = false;
     }
-    public String getName(){
-        return name;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
+   public String getName(){
+       return name;
+   }
 
     public void setAppetite(int appetite){
         this.appetite = appetite;

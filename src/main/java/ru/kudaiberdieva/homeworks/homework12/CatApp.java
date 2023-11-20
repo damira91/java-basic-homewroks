@@ -6,8 +6,9 @@ public class CatApp {
     public static void main(String[] args) {
         Plate plate = new Plate(930, 900);
         plate.info();
-       // plate.reduce(180);
-       // plate.info();
+        plate.add(30);
+        plate.reduce(100);
+        plate.info();
 
 
         Cat cat = new Cat("Garfield", 80, false);

@@ -10,21 +10,26 @@ public class Plate {
     }
 
     public int getMaxFoodAmount(){
+
         return maxFoodAmount;
     }
     public int getFood(){
         return food;
     }
     public void setFood(int food){
-        this.food = food;
+        if (food >= 0) {
+            this.food = food;
+        }else {
+            System.out.println("Значение food не может быть отрицательным.");
+        }
     }
     public void add(int amount){
-        if(food<=maxFoodAmount){
+        if(food<=maxFoodAmount && amount >=0){
             food+=amount;
         }
     }
     public boolean reduce(int amount){
-        if(food>=0){
+        if(food>=0 && amount>=0){
             food-=amount;
             return true;
         }  else return false;
