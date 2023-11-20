@@ -11,7 +11,7 @@ public class Car implements Transport {
     }
     @Override
     public boolean move(int distance, Location location){
-        if (location.equals(Location.FOREST) || location.equals(Location.SWAMP)){
+        if (location == Location.FOREST || location == Location.SWAMP){
             System.out.println("Car can't ride in " + location);
             return false;
         }

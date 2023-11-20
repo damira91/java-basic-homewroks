@@ -12,7 +12,7 @@ public class Horse implements Transport {
 
      @Override
      public boolean move(int distance, Location location){
-          if(location.equals(Location.SWAMP)){
+          if(location == Location.SWAMP){
                System.out.println("Horse can't ride this " + Location.SWAMP);
                return false;
           }

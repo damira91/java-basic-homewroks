@@ -4,10 +4,11 @@ public class TravelApp {
     public static void main(String[] args) {
         Car car = new Car(100);
         Horse horse = new Horse(80);
-        Bicycle bicycle = new Bicycle(65);
+
         AllTerraineVehicle allTerraineVehicle = new AllTerraineVehicle(200);
 
-        Person person = new Person("Tom");
+        Person person = new Person("Tom",60);
+        Bicycle bicycle = new Bicycle(person);
         person.setCurrentTransport(car);
         person.ride(person.getCurrentTransport(), 70, Location.PLAIN);
         person.ride(person.getCurrentTransport(), 20, Location.FOREST);

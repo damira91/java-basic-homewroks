@@ -13,13 +13,14 @@ public class AllTerraineVehicle implements Transport {
 
     @Override
     public boolean move(int distance, Location location){
-        if(fuel>=distance){
+        if(fuel>=distance) {
             System.out.println("All-terrain vehicle passed " + distance + " kilometres " + "in " + location);
-            fuel-=distance;
+            fuel -= distance;
             return true;
-        }else{
+        }
+
             System.out.println("All-terrain vehicle can't ride because of lack of fuel");
             return false;
-        }
+
     }
 }
