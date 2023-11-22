@@ -28,14 +28,12 @@ public class MainApp {
                 {"4", "2", "8", "9"},
                 {"5", "7", "3", "1"},
                 {"12", "10", "6", "4"},
-                {"7", "23", "13", "17"},
+                {"7", "23", "13", "17"}
         };
         try {
             sumArrayElements(myMatrix);
-        } catch (AppArraySizeException e) {
+        } catch (AppArraySizeException | AppArrayDataException e) {
             System.out.println(e.getMessage());
-        } catch (AppArrayDataException ex) {
-            System.out.println(ex.getMessage());
         }
     }
 
