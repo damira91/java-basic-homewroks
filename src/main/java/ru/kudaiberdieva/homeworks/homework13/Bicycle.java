@@ -5,7 +5,7 @@ public class Bicycle implements Transport {
 
 
     public Bicycle(Person person) {
-        this.person = person;
+       this.person = person;
     }
 
 
