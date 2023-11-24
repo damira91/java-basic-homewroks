@@ -2,30 +2,32 @@ package ru.kudaiberdieva.homeworks.homework13;
 
 public class TravelApp {
     public static void main(String[] args) {
+        Person person = new Person("Tom",60);
         Car car = new Car(100);
+        Bicycle bicycle = new Bicycle(person);
         Horse horse = new Horse(80);
         AllTerraineVehicle allTerraineVehicle = new AllTerraineVehicle(200);
 
-        Person person = new Person("Tom",60);
 
-        person.setCurrentTransport(car);
-        person.ride(person.getCurrentTransport(), 70, Location.PLAIN);
-        person.ride(person.getCurrentTransport(), 20, Location.FOREST);
+
+        person.getInTransport(car);
+        person.ride(70, Location.PLAIN);
+        person.ride(20, Location.FOREST);
         person.getOffCurrentTransport();
 
-        person.setCurrentTransport(new Bicycle(person));
-        person.ride(person.getCurrentTransport(), 45, Location.FOREST);
+        person.getInTransport(bicycle);
+        person.ride( 45, Location.FOREST);
         person.getOffCurrentTransport();
 
-        person.setCurrentTransport(horse);
-        person.ride(person.getCurrentTransport(), 90, Location.PLAIN);
+        person.getInTransport(horse);
+        person.ride(90, Location.PLAIN);
         person.getOffCurrentTransport();
 
-        person.setCurrentTransport(allTerraineVehicle);
-        person.ride(person.getCurrentTransport(), 180, Location.SWAMP);
+        person.getInTransport(allTerraineVehicle);
+        person.ride(180, Location.SWAMP);
         person.getOffCurrentTransport();
 
-        person.ride(person.getCurrentTransport(), 60, Location.FOREST);
+        person.ride(60, Location.FOREST);
 
         }
     }

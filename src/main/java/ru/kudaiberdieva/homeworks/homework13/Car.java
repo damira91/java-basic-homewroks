@@ -4,9 +4,11 @@ public class Car implements Transport {
     private int fuel;
 
     public int getFuel(){
+
         return fuel;
     }
     public Car(int fuel){
+
         this.fuel = fuel;
     }
     @Override

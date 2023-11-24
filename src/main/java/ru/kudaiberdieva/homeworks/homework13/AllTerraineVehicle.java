@@ -8,6 +8,7 @@ public class AllTerraineVehicle implements Transport {
     }
 
     public AllTerraineVehicle(int fuel){
+
         this.fuel = fuel;
     }
 

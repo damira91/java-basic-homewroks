@@ -5,17 +5,19 @@ public class Bicycle implements Transport {
 
 
     public Bicycle(Person person) {
-       this.person = person;
-    }
+        this.person = person;
+   }
+
 
 
     @Override
-    public boolean move(int distance, Location location){
+    public boolean move(int distance,Location location){
 
         if(location == Location.SWAMP){
             System.out.println("Bicycle can't ride " + Location.SWAMP);
             return false;
         }
+
         if(person.getRiderEnergy()>=distance){
             System.out.println("Bicycle passed " + distance);
             person.decreaseEnergy(distance);
