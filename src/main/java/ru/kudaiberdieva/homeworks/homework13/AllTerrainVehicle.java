@@ -1,15 +1,14 @@
 package ru.kudaiberdieva.homeworks.homework13;
 
-public class AllTerraineVehicle implements Transport {
+public class AllTerrainVehicle implements Transport {
     private int fuel;
+    private Person person;
 
-    public int getFuel(){
-        return fuel;
-    }
 
-    public AllTerraineVehicle(int fuel){
+    public AllTerrainVehicle(int fuel){
 
         this.fuel = fuel;
+        this.person = null;
     }
 
     @Override
@@ -19,9 +18,11 @@ public class AllTerraineVehicle implements Transport {
             fuel -= distance;
             return true;
         }
-
-            System.out.println("All-terrain vehicle can't ride because of lack of fuel");
+        System.out.println("All-terrain vehicle can't ride because of lack of fuel");
             return false;
-
     }
+    @Override
+    public void setDriver(Person person) {
+        this.person = person;
+        }
 }

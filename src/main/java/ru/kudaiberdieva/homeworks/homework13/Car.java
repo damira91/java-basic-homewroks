@@ -2,14 +2,12 @@ package ru.kudaiberdieva.homeworks.homework13;
 
 public class Car implements Transport {
     private int fuel;
+    private Person person;
 
-    public int getFuel(){
-
-        return fuel;
-    }
     public Car(int fuel){
 
         this.fuel = fuel;
+        this.person = null;
     }
     @Override
     public boolean move(int distance, Location location){
@@ -25,5 +23,9 @@ public class Car implements Transport {
             System.out.println("Car can't ride because of lack of fuel");
             return false;
         }
+    }
+    @Override
+    public void setDriver(Person person) {
+            this.person = person;
     }
 }

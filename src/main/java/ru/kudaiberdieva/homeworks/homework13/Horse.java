@@ -2,12 +2,13 @@ package ru.kudaiberdieva.homeworks.homework13;
 
 public class Horse implements Transport {
      private int power;
+     private Person person;
 
-     public int getPower(){
-          return power;
-     }
+
      public Horse(int power){
+
           this.power = power;
+          this.person = null;
      }
 
      @Override
@@ -24,5 +25,10 @@ public class Horse implements Transport {
                System.out.println("Horse can't ride because is tired");
                return false;
           }
+     }
+     @Override
+     public void setDriver(Person person) {
+          this.person = person;
+
      }
 }

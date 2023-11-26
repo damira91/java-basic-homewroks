@@ -4,11 +4,12 @@ public class Person {
     private final String name;
     private Transport currentTransport;
     private int riderEnergy;
-    private boolean isSitting;
+
 
     public Person(String name, int riderEnergy){
         this.name=name;
         this.riderEnergy = riderEnergy;
+        this.currentTransport = null;
     }
 
 
@@ -17,22 +18,14 @@ public class Person {
         return riderEnergy;
     }
 
-    public Transport getCurrentTransport() {
 
-        return currentTransport;
-    }
-
-
-    public void setCurrentTransport(Transport transport){
-
-        this.currentTransport = transport;
-    }
-    public void getInTransport(Transport transport){
-        if(currentTransport == null){
+    public void getInTransport(Transport transport) {
+        if (currentTransport == null) {
             currentTransport = transport;
-            System.out.println(name + " got in: " + transport.getClass().getSimpleName());
-        }else {
-            System.out.println(name + " is already sitting in: " +transport.getClass().getSimpleName());
+            transport.setDriver(this);
+            System.out.println(name + " got in: " + currentTransport.getClass().getSimpleName());
+        } else {
+            System.out.println(name + " is already sitting in: " + currentTransport.getClass().getSimpleName());
         }
     }
 
@@ -49,7 +42,12 @@ public class Person {
         }
     }
     public void getOffCurrentTransport(){
-
-        this.currentTransport = null;
+        if(currentTransport != null){
+            System.out.println(name + " got off " + currentTransport.getClass().getSimpleName());
+            currentTransport.setDriver(null);
+            currentTransport = null;
+        }else {
+            System.out.println(name + " is not in transport");
+        }
     }
 }

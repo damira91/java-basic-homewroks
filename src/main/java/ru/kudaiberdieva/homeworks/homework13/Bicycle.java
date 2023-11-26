@@ -3,12 +3,9 @@ package ru.kudaiberdieva.homeworks.homework13;
 public class Bicycle implements Transport {
     private Person person;
 
-
-    public Bicycle(Person person) {
-        this.person = person;
-   }
-
-
+    public Bicycle(){
+        this.person = null;
+    }
 
     @Override
     public boolean move(int distance,Location location){
@@ -25,6 +22,11 @@ public class Bicycle implements Transport {
         }
             System.out.println("Rider is tired and can't move further");
             return false;
+
+    }
+    @Override
+    public void setDriver(Person person) {
+        this.person = person;
 
     }
 }

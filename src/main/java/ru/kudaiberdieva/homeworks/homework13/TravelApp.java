@@ -4,9 +4,9 @@ public class TravelApp {
     public static void main(String[] args) {
         Person person = new Person("Tom",60);
         Car car = new Car(100);
-        Bicycle bicycle = new Bicycle(person);
+        Bicycle bicycle = new Bicycle();
         Horse horse = new Horse(80);
-        AllTerraineVehicle allTerraineVehicle = new AllTerraineVehicle(200);
+        AllTerrainVehicle allTerrainVehicle = new AllTerrainVehicle(200);
 
 
 
@@ -23,7 +23,7 @@ public class TravelApp {
         person.ride(90, Location.PLAIN);
         person.getOffCurrentTransport();
 
-        person.getInTransport(allTerraineVehicle);
+        person.getInTransport(allTerrainVehicle);
         person.ride(180, Location.SWAMP);
         person.getOffCurrentTransport();
 
