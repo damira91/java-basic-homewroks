@@ -5,8 +5,11 @@ public class MainApp {
     public static int sumArrayElements(String[][] matrix)  {
 
         int sum = 0;
-        if(matrix.length !=4 || matrix[0].length != 4 || matrix[1].length !=4 || matrix[2].length !=4 || matrix[3].length!=4){
-            throw new AppArraySizeException("Wrong array size");
+
+        for (int i = 0; i < matrix.length; i++) {
+            if(matrix.length !=4 || matrix[i].length != 4 ){
+                throw new AppArraySizeException("Wrong array size");
+            }
         }
 
         for (int  i = 0; i < matrix.length; i++) {
