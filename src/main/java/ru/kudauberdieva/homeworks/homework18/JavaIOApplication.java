@@ -2,6 +2,7 @@ package ru.kudauberdieva.homeworks.homework18;
 
 import java.io.*;
 
+
 public class JavaIOApplication {
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -11,13 +12,12 @@ public class JavaIOApplication {
         File directory = new File(filePath);
 
         loadAllFiles(directory);
-        String fileName=getUserInput();
+        System.out.println("Enter the file name: ");
+        String fileName = getUserInput();
         String content = readFileContent( filePath + fileName);
         System.out.println(content);
-        writeToFile(filePath + fileName, "\n" + "Hello java writer.");
-
-
-
+        writeToFile(filePath + fileName);
+        System.out.println(readFileContent(filePath + fileName));
     }
 
     private static void loadAllFiles(File directory) {
@@ -32,7 +32,7 @@ public class JavaIOApplication {
     }
 
    private static String getUserInput() {
-       System.out.println("Enter the file name: ");
+
        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
        try {
            return reader.readLine();
@@ -65,9 +65,10 @@ public class JavaIOApplication {
             }
         }
     }
-    private static void writeToFile(String filePath, String content) {
+    private static void writeToFile(String filePath) {
+        System.out.println("Enter text: ");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
-            writer.write(content);
+            writer.write(getUserInput());
             writer.newLine();
             System.out.println("String successfully written to the file.");
         } catch (IOException e) {
