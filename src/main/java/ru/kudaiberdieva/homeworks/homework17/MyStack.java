@@ -6,18 +6,15 @@ public class MyStack <T>{
     public MyStack() {
         this.linkedList = new MyLinkedList<>();
     }
-
     public void push(T data) {
         linkedList.addFirst(data);
     }
-
-    public T pop() throws IllegalAccessException {
+    public T pop() {
         if (linkedList.getSize() == 0) {
-            throw new IllegalStateException("Stack is empty");
+            return null;
         }
         return (T) linkedList.remove(0);
     }
-
     public int size() {
         return linkedList.getSize();
     }
