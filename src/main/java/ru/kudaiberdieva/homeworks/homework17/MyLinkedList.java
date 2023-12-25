@@ -1,8 +1,6 @@
 package ru.kudaiberdieva.homeworks.homework17;
 
 
-import java.util.Arrays;
-
 public class MyLinkedList<T> {
     private Item<T> start;
     private Item<T> end;
