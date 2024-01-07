@@ -14,12 +14,8 @@ public class ClientMain {
             DataOutputStream dataOutToServer = new DataOutputStream(socket.getOutputStream());// отправляет исхоящий поток
             DataInputStream dataInFromServer = new DataInputStream(socket.getInputStream());// принимает входящий поток
             Scanner scanner = new Scanner(System.in);
-
-            System.out.println("Choose following operations: +, -, *, /");
-            System.out.println("1. Addition");
-            System.out.println("2. Subtraction");
-            System.out.println("3. Multiplication");
-            System.out.println("4. Division");
+            String operations = dataInFromServer.readUTF();
+            System.out.println("Choose following operations: " + operations);
             System.out.println("Enter 0 to exit.");
             while (true) {
                 System.out.println("Enter choice");
